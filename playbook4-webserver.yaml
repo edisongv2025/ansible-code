@@ -1,0 +1,19 @@
+---
+- name: installation of webservers and start services
+  hosts: all
+  tasks:
+  - name: installing the package
+    yum:
+      name: httpd
+      state: latest
+
+  - name: Creating a webpage
+    copy:
+      content: " hello edison and team unix from team Unix manila"
+      dest: /var/www/html/index.html
+
+  - name: start the service
+    service:
+      name: httpd
+      state: started
+      enabled: true
