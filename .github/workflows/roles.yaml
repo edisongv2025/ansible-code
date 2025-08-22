@@ -23,6 +23,6 @@ jobs:
           ANSIBLE_HOST_KEY_CHECKING: False
         run: |
           pwd
-          cp /home/shruti/ansible/inventory.yaml  /home/shruti/ansible/roles/inventory.yaml 
-          cp /home/shruti/ansible/ansible.cfg  /home/shruti/ansible/roles/ansible.cfg 
-          ansible-playbook  ./ansible/site.yaml -i /home/shruti/ansible/inventory.yaml  --become
+          cp /home/edison/ansible/inventory.yaml  /home/edison/ansible/roles/inventory.yaml 
+          cp /home/edison/ansible/ansible.cfg  /home/edison/ansible/roles/ansible.cfg 
+          ansible-playbook  ./ansible/site.yaml -i /home/edison/ansible/inventory.yaml  --become
